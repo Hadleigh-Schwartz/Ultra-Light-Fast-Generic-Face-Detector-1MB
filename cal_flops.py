@@ -33,6 +33,6 @@ print("PARAMS:", params)
 for i in range(5):
     time_time = time.time()
     features = fd(x)
-    print("inference time :{} s".format(time.time() - time_time))
+    #print("inference time :{} s".format(time.time() - time_time))
 
 stat(fd, (3, width, height))

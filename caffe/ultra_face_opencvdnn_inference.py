@@ -164,7 +164,7 @@ def inference():
         net.setInput(dnn.blobFromImage(rect, 1 / image_std, (witdh, height), 127))
         time_time = time.time()
         boxes, scores = net.forward(["boxes", "scores"])
-        print("inference time: {} s".format(round(time.time() - time_time, 4)))
+        #print("inference time: {} s".format(round(time.time() - time_time, 4)))
         boxes = np.expand_dims(np.reshape(boxes, (-1, 4)), axis=0)
         scores = np.expand_dims(np.reshape(scores, (-1, 2)), axis=0)
         boxes = convert_locations_to_boxes(boxes, priors, center_variance, size_variance)
